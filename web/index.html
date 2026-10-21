@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SILLAGE · Maison de Coiffure &amp; Beauté · Ludhiana, est. 1987</title>
+<meta name="description" content="SILLAGE is a hair and beauty maison in Ludhiana: precision cutting, hand-painted colour, skin, nails and a bridal chambre. Book a chair online, pay at the desk or by UPI.">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/editorial.css">
+<link rel="stylesheet" href="/assets/css/landing.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151310'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23C9A96A' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the main content</a>
+
+<!-- ══════════════════════════════════════════════════════ running ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Est. 1987</span><span>Fountain Lane, Civil Lines, Ludhiana</span><span>Closed Mondays</span>
+    <span>Walk-ins welcome</span><span>Hand-painted colour</span><span>Bridal chambre by appointment</span>
+    <span>Est. 1987</span><span>Fountain Lane, Civil Lines, Ludhiana</span><span>Closed Mondays</span>
+    <span>Walk-ins welcome</span><span>Hand-painted colour</span><span>Bridal chambre by appointment</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ masthead -->
+<header class="masthead">
+  <div class="wrap masthead-in">
+    <a class="brand" href="#top" aria-label="SILLAGE, front page">
+      <span class="brand-mark">Sillage</span>
+      <span class="brand-sub">Maison de coiffure</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu">The Index</a>
+      <a href="#chairs">The Chairs</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#membership">Membership</a>
+      <a href="#house">The House</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="link" type="button" id="btnAccess" aria-label="Reading and access preferences">Access</button>
+      <a class="btn gold sm" href="/book">Book a chair</a>
+      <a class="btn sm ghost" href="/studio" id="btnStudio">Studio</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- ══════════════════════════════════════════════════════════════ hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">No. 39 · Autumn edition · Ludhiana</p>
+      <h1>
+        <span class="line">The chair</span>
+        <span class="line">is a <em>quiet</em></span>
+        <span class="line">argument.</span>
+      </h1>
+      <p class="lede">
+        Thirty-nine years of cutting on one lane in Civil Lines. We do not chase a season;
+        we build a shape that survives the monsoon, a wedding week and a bad Tuesday.
+        Book a chair, keep your own record, and pay however you like.
+      </p>
+      <div class="btn-row">
+        <a class="btn solid" href="/book">Book a chair</a>
+        <a class="btn ghost" href="#menu">Read the index</a>
+        <span class="tiny" id="openNow">Checking the door&hellip;</span>
+      </div>
+
+      <!-- the house index: instant search over the menu, the chairs and the lookbook -->
+      <form class="finder" id="finder" role="search" autocomplete="off">
+        <label class="sr-only" for="finderInput">Search the menu, the stylists and the lookbook</label>
+        <input id="finderInput" type="search" placeholder="Search the index — balayage, Meher, bridal, 98145&hellip;" aria-describedby="finderHint">
+        <button type="submit">Search</button>
+        <p class="hint" id="finderHint" style="margin:.5rem 0 0">Indexed locally. Try a phone number, a stylist, a price word or a festival.</p>
+        <div class="finder-results hide" id="finderResults" role="listbox" aria-label="Search results"></div>
+      </form>
+    </div>
+
+    <aside class="hero-side">
+      <p class="tiny">Today at the salon</p>
+      <dl class="kv" id="heroFacts" style="margin:.8rem 0 0">
+        <dt>Chairs</dt><dd id="factChairs">seven</dd>
+        <dt>Services</dt><dd id="factServices">&mdash;</dd>
+        <dt>Next free</dt><dd id="factNext">&mdash;</dd>
+        <dt>Since</dt><dd>1987</dd>
+      </dl>
+      <div class="plates">
+        <figure class="plate" style="margin:0">
+          <img src="/assets/img/hero-interior.jpg" alt="The salon floor: four chairs under north light, bone walls and a marble counter" onerror="this.style.display='none'">
+          <figcaption>The floor, 10:40 on a Thursday</figcaption>
+        </figure>
+        <figure class="plate" style="margin:0">
+          <img src="/assets/img/detail-colour.jpg" alt="A stylist's hands painting light through a long section of hair" onerror="this.style.display='none'">
+          <figcaption>Balayage, third pass</figcaption>
+        </figure>
+      </div>
+      <p class="marginal" style="margin-top:1rem">
+        Photographed in-house. No stock imagery, no filters we would not use on a client.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ No. 01 — the index -->
+<section class="section" id="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 01</p>
+        <h2>The Index of Services</h2>
+      </div>
+      <p class="note">
+        Prices in rupees, tax as the law asks for it, and the honest duration &mdash; including the
+        consultation you are not billed for. Filter by room, or search above.
+      </p>
+      <span class="folio-num">01</span>
+    </div>
+
+    <div class="chip-row reveal" id="menuFilters" role="group" aria-label="Filter the index by room" style="margin-bottom:2rem"></div>
+    <div class="menu-cols" id="menuCols"><p class="muted">Loading the index&hellip;</p></div>
+
+    <div class="between reveal" style="margin-top:2.4rem;gap:1rem;flex-wrap:wrap">
+      <p class="hint" style="margin:0">Deposits are taken only on bridal bookings. Everything else is settled at the desk or online.</p>
+      <a class="btn ghost" href="/book">Choose a chair</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ No. 02 — the chairs -->
+<section class="section" id="chairs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 02</p>
+        <h2>Seven Chairs, Seven Opinions</h2>
+      </div>
+      <p class="note">
+        Every stylist keeps their own book. Ask for a name and you will get the same hands
+        every time &mdash; that is the whole idea of a maison.
+      </p>
+      <span class="folio-num">02</span>
+    </div>
+    <div class="chairs reveal" id="chairGrid"><p class="muted">Loading the chairs&hellip;</p></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ No. 03 — the lookbook -->
+<section class="section" id="lookbook">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 03</p>
+        <h2>The Lookbook</h2>
+      </div>
+      <p class="note">
+        Work from the last season, with the palette we mixed and the services it took to get there.
+        Bring one of these to the chair and we will tell you honestly whether it suits you.
+      </p>
+      <span class="folio-num">03</span>
+    </div>
+    <div class="looks reveal" id="lookGrid"><p class="muted">Loading the lookbook&hellip;</p></div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════ No. 04 — membership -->
+<section class="section" id="membership">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 04</p>
+        <h2>Membership</h2>
+      </div>
+      <p class="note">
+        No card to carry and nothing to remember. Points arrive on every settled bill and the
+        tier moves by itself; the front desk can always tell you where you stand.
+      </p>
+      <span class="folio-num">04</span>
+    </div>
+    <div class="tiers reveal" id="tierGrid"></div>
+    <div class="grid g2 reveal" style="margin-top:2.4rem;align-items:start">
+      <div class="card">
+        <h4 style="font-family:var(--display);font-size:1.4rem;margin-bottom:.6rem">Gift cards</h4>
+        <p style="font-size:.94rem;color:var(--fg-soft)">
+          Buy a value, print a code, hand it over. Valid twenty-four months, splittable across visits,
+          redeemable at the desk or online. The balance is checked before anything is charged.
+        </p>
+        <div class="btn-row" style="margin-top:.9rem">
+          <a class="btn sm ghost" href="/book#gift">Check a card balance</a>
+          <span class="tiny">Issued at the desk</span>
+        </div>
+      </div>
+      <div class="card">
+        <h4 style="font-family:var(--display);font-size:1.4rem;margin-bottom:.6rem">Receipts you can prove</h4>
+        <p style="font-size:.94rem;color:var(--fg-soft)">
+          Every bill carries a seal. Enter the number and the twelve-character code from the paper
+          receipt and we will confirm it against the book &mdash; useful for expenses, warranty
+          arguments and peace of mind.
+        </p>
+        <form class="row" id="verifyForm" style="margin-top:.9rem;grid-template-columns:1fr 1fr auto;align-items:end">
+          <div class="field" style="margin:0">
+            <label class="lbl" for="vNumber">Receipt number</label>
+            <input id="vNumber" name="number" placeholder="SIL/FY2026-27/00412" autocomplete="off">
+          </div>
+          <div class="field" style="margin:0">
+            <label class="lbl" for="vCode">Seal</label>
+            <input id="vCode" name="code" placeholder="12 characters" autocomplete="off">
+          </div>
+          <button class="btn sm solid" type="submit">Verify</button>
+        </form>
+        <p class="hint" id="verifyOut" role="status" style="margin:.7rem 0 0"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════ No. 05 — in their words -->
+<section class="section" id="words">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 05</p>
+        <h2>In Their Words</h2>
+      </div>
+      <p class="note">Left at the desk, on a search engine, or in the book by the door. Unedited except for spelling.</p>
+      <span class="folio-num">05</span>
+    </div>
+    <div class="quotes reveal" id="quoteGrid"></div>
+    <form class="card reveal" id="quoteForm" style="margin-top:2.2rem">
+      <p class="tiny" style="margin-top:0">Leave one of your own</p>
+      <div class="row" style="margin-top:.8rem">
+        <div class="field" style="margin:0">
+          <label class="lbl" for="qName">Your name</label>
+          <input id="qName" name="authorName" required maxlength="60" autocomplete="name">
+        </div>
+        <div class="field" style="margin:0">
+          <label class="lbl" for="qHandle">Handle <span class="muted">(optional)</span></label>
+          <input id="qHandle" name="handle" maxlength="40" placeholder="@you">
+        </div>
+        <div class="field" style="margin:0">
+          <label class="lbl" for="qRating">Stars</label>
+          <select id="qRating" name="rating">
+            <option value="5">Five</option><option value="4">Four</option>
+            <option value="3">Three</option><option value="2">Two</option><option value="1">One</option>
+          </select>
+        </div>
+      </div>
+      <div class="field" style="margin:.9rem 0 0">
+        <label class="lbl" for="qText">What should we know?</label>
+        <textarea id="qText" name="quote" required maxlength="600" placeholder="Two sentences is plenty."></textarea>
+      </div>
+      <div class="between" style="margin-top:.9rem;gap:1rem;flex-wrap:wrap">
+        <p class="hint" style="margin:0">Notes are read by the team before they appear on this page.</p>
+        <button class="btn sm solid" type="submit">Send to the desk</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ No. 06 — the house -->
+<section class="section" id="house">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 06</p>
+        <h2>The House</h2>
+      </div>
+      <p class="note">A short history, and the rules we keep. Both are older than this website.</p>
+      <span class="folio-num">06</span>
+    </div>
+
+    <div class="split reveal">
+      <div class="column">
+        <p class="dropcap">
+          Meher Kapur opened the first chair in 1987 above a stationer on Fountain Lane, with one
+          mirror, one hairdryer and a card in the window that said <em>Cutting, by appointment</em>.
+          The card is still in the drawer. The mirror is still on the wall.
+        </p>
+        <p>
+          What changed is the discipline. Colour became a chemistry we study rather than a product we
+          buy; cutting became a consultation before it became a scissors; and the book &mdash; the diary
+          of who sat where and when &mdash; became something we could actually read back.
+        </p>
+        <blockquote class="pullquote">
+          A haircut should look like the person, only more awake.
+        </blockquote>
+        <p>
+          We are seven chairs now, a skin room, a nail table and a bridal chambre that takes four
+          hours and one photograph. We close on Monday because a salon that never closes eventually
+          stops caring how it looks.
+        </p>
+        <p>
+          Everything on this page is run from one small program in the back office: the diary, the
+          till, the shelf, the receipts and the reminders. It keeps its own audit trail, and it will
+          hand you a copy of your record &mdash; or erase it &mdash; whenever you ask.
+        </p>
+      </div>
+      <aside>
+        <p class="tiny">House rules</p>
+        <dl class="kv" id="policyList" style="margin-top:.8rem"></dl>
+        <hr class="rule">
+        <p class="tiny">Your record</p>
+        <p style="font-size:.92rem;color:var(--fg-soft)">
+          Creating an account is optional. You can book, pay and keep a receipt without one; an account
+          simply lets the diary remember you across devices. Ask the desk for an export or an erasure
+          at any time &mdash; it takes one screen and one signature in the audit log.
+        </p>
+        <div class="btn-row" style="margin-top:.6rem">
+          <a class="btn sm ghost" href="/studio#/profile">Your profile</a>
+          <a class="btn sm ghost" href="/studio#/privacy">Privacy</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ No. 07 — visit -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">No. 07</p>
+        <h2>Visit</h2>
+      </div>
+      <p class="note">Fountain Lane, Civil Lines. The blue door with the brass plate; parking behind the florist.</p>
+      <span class="folio-num">07</span>
+    </div>
+
+    <div class="visit-grid reveal">
+      <div>
+        <p class="tiny">Opening hours</p>
+        <table class="hours" id="hoursTable" style="margin-top:.7rem">
+          <caption class="sr-only">Weekly opening hours</caption>
+          <tbody></tbody>
+        </table>
+        <p class="hint" id="holidayNote" style="margin-top:.7rem"></p>
+      </div>
+      <div>
+        <p class="tiny">The address</p>
+        <address style="font-style:normal;font-size:.98rem;line-height:1.7;margin-top:.7rem" id="addressBlock"></address>
+        <p class="tiny" style="margin-top:1.4rem">Getting here</p>
+        <p style="font-size:.9rem;color:var(--fg-soft)">
+          Six minutes from the Model Town crossing; the rickshaw stand is at the lane mouth.
+          Step-free entry from the side door &mdash; ring the bell and we will bring the chair to you.
+        </p>
+      </div>
+      <div>
+        <p class="tiny">Booking</p>
+        <div class="card tight" style="margin-top:.7rem">
+          <p style="font-size:.94rem;color:var(--fg-soft);margin-bottom:1rem">
+            Choose a service, a chair and a time. Pay now by card or UPI, or simply pay at the desk.
+            A reminder goes out the day before, and cancelling is free up to six hours ahead.
+          </p>
+          <a class="btn solid block" href="/book">Open the booking book</a>
+          <p class="hint" style="margin:.8rem 0 0">No account needed. Guests are welcome.</p>
+        </div>
+        <p class="tiny" style="margin-top:1.2rem">The back office</p>
+        <a class="btn ghost sm" href="/studio">Open the studio console</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ closing band -->
+<section class="section" style="background:var(--ink);color:var(--bone);border-top:0">
+  <div class="wrap" style="text-align:center;padding-block:1rem">
+    <p class="kicker plain" style="justify-content:center;color:var(--champagne)">Come and sit down</p>
+    <h2 style="color:var(--bone);max-width:26ch;margin:0 auto 1.2rem">
+      Four hundred chairs a month, <em style="color:var(--champagne)">one at a time</em>.
+    </h2>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn" style="--btn-bd:var(--champagne);--btn-fg:var(--champagne)" href="/book">Book a chair</a>
+      <a class="btn ghost" style="--btn-fg:var(--bone);--btn-bd:rgba(244,241,234,.4)" href="#menu">Read the index</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════ colophon -->
+<footer class="colophon">
+  <div class="wrap">
+    <div class="colophon-grid">
+      <div>
+        <p class="brand-mark" style="font-size:1.1rem;margin-bottom:.5rem">Sillage</p>
+        <p style="font-size:.9rem;color:var(--fg-soft);max-width:34ch">
+          Maison de coiffure &amp; beaut&eacute;. Fountain Lane, Civil Lines, Ludhiana 141001.
+          Open Tuesday to Sunday; closed on Monday.
+        </p>
+        <p class="mono" style="font-size:.72rem;color:var(--fg-mut);margin-top:.9rem" id="colophonContact"></p>
+      </div>
+      <div>
+        <h5>The salon</h5>
+        <ul>
+          <li><a href="#menu">The index of services</a></li>
+          <li><a href="#chairs">The chairs</a></li>
+          <li><a href="#lookbook">Lookbook</a></li>
+          <li><a href="#membership">Membership &amp; gift cards</a></li>
+          <li><a href="/book">Book a chair</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Your record</h5>
+        <ul>
+          <li><a href="/studio#/profile">Profile &amp; preferences</a></li>
+          <li><a href="/studio#/privacy">How your data is kept</a></li>
+          <li><a href="#" id="linkErasure">Ask for an erasure</a></li>
+          <li><a href="/studio#/sessions">Active sessions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>The back office</h5>
+        <ul>
+          <li><a href="/studio">Studio console</a></li>
+          <li><a href="/api/health">Health</a></li>
+          <li><a href="/api/bootstrap">Bootstrap payload</a></li>
+          <li><a href="/api/meta/engine">The suggestion rulebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine between" style="gap:1rem;flex-wrap:wrap">
+      <p class="mono" style="font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-mut);margin:0">
+        Set in Bodoni Moda, Jost and IBM Plex Mono &middot; <span id="colophonEngine"></span>
+      </p>
+      <p class="mono" style="font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-mut);margin:0">
+        <button class="link" type="button" id="btnAccessFoot">Reading &amp; access</button>
+        &middot; est. 1987
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/sillage.js"></script>
+<script src="/assets/js/landing.js"></script>
+</body>
+</html>

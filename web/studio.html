@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio · SILLAGE back office</title>
+<meta name="description" content="The SILLAGE studio console: diary, clients, point of sale, inventory, suggestions, analytics and settings.">
+<meta name="theme-color" content="#F4F1EA">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/editorial.css">
+<link rel="stylesheet" href="/assets/css/studio.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239C7B3F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23F4F1EA' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body class="studio">
+<a class="skip" href="#view">Skip to the console</a>
+
+<!-- ═══════════════════════════════════════════════════════════ left rail -->
+<aside class="rail" id="rail" aria-label="Console sections">
+  <div class="rail-head">
+    <a class="brand" href="/" style="text-decoration:none">
+      <span class="brand-mark">Sillage</span>
+    </a>
+    <p class="tiny" style="margin:.4rem 0 0" id="railSalon">Maison de coiffure &amp; beaut&eacute;</p>
+  </div>
+  <div class="rail-search">
+    <label class="sr-only" for="globalSearch">Search everything</label>
+    <input id="globalSearch" type="search" placeholder="Search  ( / )" autocomplete="off" aria-describedby="searchHint">
+    <p class="hint" id="searchHint" style="margin:.4rem 0 0">Clients, bills, services, stock, the diary &mdash; one index.</p>
+  </div>
+  <nav class="rail-nav" id="railNav" aria-label="Sections"></nav>
+  <div class="rail-foot" id="railFoot"></div>
+</aside>
+<div class="rail-scrim hide" id="railScrim"></div>
+
+<!-- ════════════════════════════════════════════════════════════════ main -->
+<div class="main">
+  <div class="topbar">
+    <button class="link rail-toggle" type="button" id="railToggle" aria-expanded="false" aria-controls="rail">Menu</button>
+    <p class="crumb" id="crumb">Studio</p>
+    <div class="tools">
+      <span class="badge mut" id="openBadge">&mdash;</span>
+      <button class="btn sm ghost" type="button" id="btnA11y" title="Reading and access (?)">Access</button>
+      <button class="btn sm ghost" type="button" id="btnTheme" title="Switch bone / ink">Theme</button>
+      <a class="btn sm ghost" href="/" target="_blank" rel="noopener">Front page</a>
+      <a class="btn sm gold" href="/book" target="_blank" rel="noopener">Book a chair</a>
+    </div>
+  </div>
+
+  <main class="view" id="view" tabindex="-1">
+    <div class="empty"><p class="big">Opening the studio</p><p>Reading the book&hellip;</p></div>
+  </main>
+
+  <footer class="colophon" style="padding-block:1.4rem">
+    <div class="wrap between" style="gap:1rem;flex-wrap:wrap">
+      <p class="mono" style="font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-mut);margin:0" id="footEngine"></p>
+      <p class="mono" style="font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-mut);margin:0">
+        <a href="/api/health" target="_blank" rel="noopener">Health</a> ·
+        <a href="/api/meta/routes" target="_blank" rel="noopener">Routes</a> ·
+        <a href="/api/meta/engine" target="_blank" rel="noopener">Rulebook</a> ·
+        <span id="footVersion"></span>
+      </p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/js/sillage.js"></script>
+<script src="/assets/js/studio.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Build output
+build/
+out/
+*.class
+*.jar
+
+# Runtime data (JSON document store, logs, backups) — seeded automatically on first run
+data/
+!data/.gitkeep
+logs/
+*.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
