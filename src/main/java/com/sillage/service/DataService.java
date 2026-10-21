@@ -306,7 +306,9 @@ public final class DataService {
     }
 
     public Map<String, Object> storage() {
-        Map<String, Object> out = new LinkedHashMap<>(store.stats());
+        Map<String, Object> out = new LinkedHashMap<>();
+        out.put("collections", store.stats());
+        out.put("documents", store.documents());
         out.put("directory", store.directory().toString());
         out.put("backupDirectory", store.backupDirectory().toString());
         out.put("diskBytes", store.diskUsageBytes());

@@ -515,8 +515,10 @@ public final class Api {
             flatDay.put("weekday", day.get("weekday"));
             flatDay.put("open", !closed);
             flatDay.put("available", slots.size());
-            flatDay.put("reason", holiday != null && !holiday.isBlank() ? holiday
-                    : (slots.isEmpty() ? "Fully booked" : null));
+            flatDay.put("reason", day.get("reason") != null && !String.valueOf(day.get("reason")).isBlank()
+                    ? String.valueOf(day.get("reason"))
+                    : (holiday != null && !holiday.isBlank() ? holiday
+                    : (slots.isEmpty() ? "Fully booked" : null)));
             flatDay.put("first", day.get("first"));
             flatDay.put("last", day.get("last"));
             flatDay.put("slots", slots);

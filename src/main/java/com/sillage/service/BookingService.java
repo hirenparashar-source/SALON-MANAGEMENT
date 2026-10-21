@@ -188,12 +188,26 @@ public final class BookingService {
             LocalDate date = start.plusDays(i);
             List<Slot> slots = slots(serviceId, variantId, staffId, date, false);
             totalFree += slots.size();
+
+            // A day with no slots has a reason, and the reason matters to the person reading it:
+            // "we are closed on Mondays" is not the same sentence as "Monday is fully booked".
+            String holiday = config.holidayNameOn(date);
+            boolean houseClosed = config.isClosedOn(date);
+            Staff.DayHours houseHours = config.hoursFor(date);
+            boolean dayOff = !houseClosed && (houseHours == null || houseHours.closed());
+            String reason = null;
+            if (houseClosed) reason = Util.present(holiday) ? holiday : "Closed";
+            else if (dayOff) reason = "Closed";
+            else if (slots.isEmpty()) reason = "Fully booked";
+
             Map<String, Object> day = new LinkedHashMap<>();
             day.put("date", date.toString());
             day.put("label", DAY.format(date));
             day.put("weekday", Util.dayName(date.getDayOfWeek()));
-            day.put("closed", config.isClosedOn(date) || slots.isEmpty());
-            day.put("holiday", config.holidayNameOn(date));
+            day.put("closed", houseClosed || dayOff || slots.isEmpty());
+            day.put("holiday", holiday);
+            day.put("dayOff", dayOff);
+            day.put("reason", reason);
             day.put("slotCount", slots.size());
             day.put("first", slots.isEmpty() ? null : Util.formatTime(slots.get(0).start()));
             day.put("last", slots.isEmpty() ? null : Util.formatTime(slots.get(slots.size() - 1).start()));

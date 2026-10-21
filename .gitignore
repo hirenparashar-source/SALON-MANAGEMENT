@@ -1,13 +1,15 @@
-# Build output
-build/
-out/
+# Build output — anchored, so a source directory called build/ or out/ is never ignored
+/build/
+/out/
 *.class
 *.jar
 
-# Runtime data (JSON document store, logs, backups) — seeded automatically on first run
-data/
-!data/.gitkeep
-logs/
+# Runtime data (JSON document store, logs, backups) — seeded automatically on first run.
+# Anchored to the repo root on purpose: an unanchored `data/` also swallows
+# src/main/java/com/sillage/data/, which is source code.
+/data/*
+!/data/.gitkeep
+/logs/
 *.log
 
 # OS / editor noise
