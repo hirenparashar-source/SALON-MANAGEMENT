@@ -233,7 +233,7 @@ public record BusinessSettings(
         theme.put("mode", "paper");
         theme.put("accent", "brass");
         theme.put("density", "comfortable");
-        theme.put("displayFace", "Bodoni Moda");
+        theme.put("displayFace", "Lora");
         theme.put("textFace", "Jost");
         theme.put("monoFace", "IBM Plex Mono");
         theme.put("showTicker", true);

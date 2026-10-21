@@ -32,7 +32,7 @@ public final class ReceiptPage {
          .append("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
          .append("<title>Receipt ").append(esc(invoice.number())).append(" \u00b7 ").append(esc(salonName)).append("</title>\n")
          .append("<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n")
-         .append("<link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\">\n")
+         .append("<link href=\"https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..600&family=Jost:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\">\n")
          .append("<style>\n").append(css()).append("</style>\n</head>\n<body>\n");
 
         b.append("<div class=\"sheet\">\n");
@@ -199,23 +199,23 @@ public final class ReceiptPage {
     private static String css() {
         return """
                 :root {
-                  --bone: #F4F1EA; --paper: #EAE5DA; --ink: #151310; --soft: #3A352E;
+                  --bone: #F4F1EA; --paper: #EAE5DA; --ink: #362511; --soft: #4A3826;
                   --gold: #9C7B3F; --champagne: #C9A96A; --bordeaux: #7A2E3A; --stone: #CFC8BA;
                 }
                 * { box-sizing: border-box; }
                 body {
                   margin: 0; padding: 32px 16px 64px; background: var(--paper); color: var(--ink);
-                  font-family: "Jost", "Segoe UI", system-ui, sans-serif; font-weight: 300;
+                  font-family: "Jost", "Segoe UI", system-ui, sans-serif; font-weight: 400;
                   -webkit-font-smoothing: antialiased;
                 }
                 .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.82em; letter-spacing: 0.02em; }
                 .sheet {
                   max-width: 780px; margin: 0 auto; background: var(--bone); padding: 52px 56px 40px;
-                  border: 1px solid var(--stone); box-shadow: 0 24px 60px -40px rgba(21,19,16,.5);
+                  border: 1px solid var(--stone); box-shadow: 0 24px 60px -40px rgba(54,37,17,.5);
                 }
                 .masthead { text-align: center; border-bottom: 2px solid var(--ink); padding-bottom: 22px; }
                 .mark {
-                  font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; font-size: 40px;
+                  font-family: "Lora", Baskerville, Garamond, Georgia, serif; font-weight: 500; font-size: 40px;
                   letter-spacing: 0.34em; text-indent: 0.34em; line-height: 1;
                 }
                 .sub { margin-top: 10px; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--soft); }
@@ -250,7 +250,7 @@ public final class ReceiptPage {
                 .row.deduction { color: var(--bordeaux); }
                 .grand {
                   display: flex; justify-content: space-between; width: 320px; margin-top: 12px; padding: 14px 0 4px;
-                  border-top: 2px solid var(--ink); font-family: "Bodoni Moda", Georgia, serif; font-size: 22px;
+                  border-top: 2px solid var(--ink); font-family: "Lora", Baskerville, Garamond, Georgia, serif; font-size: 22px;
                 }
                 .tenders { width: 320px; margin-top: 12px; border-top: 1px solid var(--stone); }
                 .tender { display: flex; justify-content: space-between; padding: 6px 0; font-size: 13px; }
@@ -264,7 +264,7 @@ public final class ReceiptPage {
                 .notes { margin: 18px 0 0; font-size: 12.5px; color: var(--soft); font-style: italic; }
                 .policy { margin: 12px 0 0; font-size: 11.5px; color: var(--soft); }
                 .thanks {
-                  margin: 26px 0 0; text-align: center; font-family: "Bodoni Moda", Georgia, serif;
+                  margin: 26px 0 0; text-align: center; font-family: "Lora", Baskerville, Garamond, Georgia, serif;
                   font-size: 16px; letter-spacing: 0.06em;
                 }
                 .colophon { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--stone);

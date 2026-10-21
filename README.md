@@ -114,8 +114,9 @@ against the book, audit trail with severity-weighted pruning, and a strict Conte
 
 ## 3 · The front end, in one paragraph
 
-Set in **Bodoni Moda** (display), **Jost** (reading) and **IBM Plex Mono** (every number, label and
-timestamp), on a palette of bone, paper, ink, old gold, champagne, bordeaux, verdigris and stone —
+Set in **Lora** (display), **Jost** (reading) and **IBM Plex Mono** (every number, label and
+timestamp), on a palette of bone, paper, espresso ink, chestnut, terracotta, old gold, champagne,
+bordeaux, verdigris and stone —
 hairline rules instead of shadows, dot leaders instead of cards, folios and marginalia instead of
 badges-for-everything. An accessibility panel (font scale 85–150 %, high contrast, reduced motion,
 dyslexia-friendly face, underlined links, WCAG 1.4.12 text spacing, large targets, spoken

@@ -24,29 +24,29 @@ public final class ErrorPages {
                 <title>{{title}} \u00b7 Sillage</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..600&family=Jost:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
                 <style>
-                  :root{--paper:#f4f1ea;--ink:#151310;--brass:#9c7b3f;--stone:#cfc8ba}
+                  :root{--paper:#f4f1ea;--ink:#362511;--brass:#9c7b3f;--stone:#cfc8ba;--chestnut:#5b3a21;--terra:#a8552e;--taupe:#6e5d47}
                   *{box-sizing:border-box}
                   body{margin:0;background:var(--paper);color:var(--ink);
                     font-family:'Jost','Avenir Next','Segoe UI',system-ui,sans-serif;
                     min-height:100vh;display:grid;place-items:center;padding:6vh 6vw}
                   .frame{max-width:44rem;width:100%;border-top:2px solid var(--ink);padding-top:1.2rem}
                   .kicker{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.7rem;letter-spacing:.34em;
-                    text-transform:uppercase;color:var(--brass)}
-                  h1{font-family:'Bodoni Moda',Didot,'Times New Roman',serif;font-weight:500;
+                    text-transform:uppercase;color:var(--taupe)}
+                  h1{font-family:'Lora',Baskerville,'Palatino Linotype',Garamond,Georgia,serif;font-weight:500;
                     font-size:clamp(3rem,11vw,7.5rem);line-height:.92;margin:.35rem 0 1rem;letter-spacing:-.02em}
-                  h1 em{font-style:italic;color:var(--brass)}
-                  p{font-size:1.02rem;line-height:1.65;max-width:34rem;color:#4a443b;margin:0 0 2rem}
+                  h1 em{font-style:italic;font-weight:500;color:var(--terra)}
+                  p{font-size:1.02rem;line-height:1.65;max-width:34rem;color:#4a3826;margin:0 0 2rem}
                   .actions{display:flex;gap:1.6rem;flex-wrap:wrap;align-items:center}
                   a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--stone);
                     padding-bottom:.2rem;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
                     font-family:'IBM Plex Mono',ui-monospace,monospace}
-                  a.primary{background:var(--ink);color:var(--paper);border-color:var(--ink);padding:.85rem 1.6rem}
+                  a.primary{background:var(--chestnut);color:var(--paper);border-color:var(--chestnut);padding:.85rem 1.6rem}
                   a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
                   .rule{height:1px;background:var(--stone);margin:3rem 0 1rem}
                   .meta{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.18em;
-                    text-transform:uppercase;color:#8b8478}
+                    text-transform:uppercase;color:#8b7a62}
                   @media (prefers-reduced-motion:no-preference){h1{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
                     @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
                 </style>

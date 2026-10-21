@@ -19,7 +19,7 @@ import java.util.Map;
 public final class StaticFiles {
 
     private static final DateTimeFormatter HTTP_DATE = DateTimeFormatter.RFC_1123_DATE_TIME.withZone(ZoneOffset.UTC);
-    private static final long ASSET_MAX_AGE = 60 * 60 * 24 * 7; // 7 days for versioned assets
+    private static final long ASSET_MAX_AGE = 60 * 60 * 24 * 7; // 7 days for images and fonts
     private static final int NOT_CACHEABLE_LIMIT = 1024;
 
     private static final Map<String, String> CONTENT_TYPES = Map.ofEntries(
@@ -108,7 +108,12 @@ public final class StaticFiles {
             response.setHeader("Last-Modified", HTTP_DATE.format(modified));
             boolean isAsset = file.toString().replace('\\', '/').contains("/assets/");
             boolean isHtml = contentType.contains("text/html");
-            if (isHtml) response.cacheControl("no-cache");
+            // CSS and JS are small and they change with the design, so they revalidate on
+            // every load (an unchanged file costs one empty 304 against the ETag above).
+            // Images and fonts are heavy and stable, so they keep the long lifetime.
+            boolean isText = contentType.startsWith("text/") || contentType.contains("javascript")
+                    || contentType.contains("json") || contentType.contains("svg");
+            if (isHtml || (isAsset && isText)) response.cacheControl("no-cache");
             else if (isAsset) response.cacheControl("public, max-age=" + ASSET_MAX_AGE);
             else response.cacheControl(size < NOT_CACHEABLE_LIMIT ? "no-cache" : "public, max-age=300");
             return response;

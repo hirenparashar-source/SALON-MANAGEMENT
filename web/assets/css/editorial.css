@@ -2,9 +2,11 @@
    SILLAGE — editorial design system
    Maison de Coiffure & Beauté · Ludhiana · est. 1987
 
-   The house style: a printed magazine, not a dashboard. Bodoni Moda for the
-   display voice, Jost for reading, IBM Plex Mono for every number, label and
-   timestamp. Hairline rules instead of shadows; no gradients; no purple.
+   The house style: a printed magazine, not a dashboard. Lora for the display
+   voice, Jost for reading, IBM Plex Mono for every number, label and timestamp.
+   Espresso ink rather than black, chestnut for the buttons, terracotta for the
+   one italic accent word. Hairline rules instead of shadows; no gradients; no
+   purple.
    ========================================================================== */
 
 /* ------------------------------------------------------------------ tokens */
@@ -12,15 +14,22 @@
   --bone:      #F4F1EA;
   --paper:     #EAE5DA;
   --card:      #FBF9F5;
-  --ink:       #151310;
-  --soft:      #3A352E;
-  --muted:     #7B7367;
-  --faint:     #A79E90;
+  /* No stark black anywhere: the ink is a deep espresso, and everything below
+     it steps down through warm browns to a mid-tone taupe for micro-copy. */
+  --ink:       #362511;
+  --soft:      #4A3826;
+  --muted:     #6E5D47;
+  --faint:     #8B7A62;
   --gold:      #9C7B3F;
   --champagne: #C9A96A;
   --bordeaux:  #7A2E3A;
   --verdigris: #4E6155;
   --stone:     #CFC8BA;
+
+  /* the brown family: buttons and the italic accent word */
+  --chestnut:      #5B3A21;
+  --chestnut-deep: #452B18;
+  --terracotta:    #A8552E;
 
   --bg:      var(--bone);
   --fg:      var(--ink);
@@ -28,8 +37,8 @@
   --fg-mut:  var(--muted);
   --surface: var(--card);
   --sunken:  var(--paper);
-  --rule:    rgba(21, 19, 16, .16);
-  --rule-2:  rgba(21, 19, 16, .34);
+  --rule:    rgba(54, 37, 17, .18);
+  --rule-2:  rgba(54, 37, 17, .36);
   --accent:  var(--gold);
   --accent-2: var(--bordeaux);
 
@@ -38,7 +47,7 @@
   --bad:     #8C2F39;
   --info:    #3C5A6B;
 
-  --display: 'Bodoni Moda', Didot, 'Times New Roman', Georgia, serif;
+  --display: 'Lora', Baskerville, 'Palatino Linotype', 'Book Antiqua', Garamond, Georgia, serif;
   --ui:      'Jost', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
   --mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
@@ -50,7 +59,7 @@
   --kicker: .6875rem;
   --radius: 2px;
   --shadow: 0 1px 0 var(--rule);
-  --lift: 0 18px 40px -32px rgba(21, 19, 16, .55);
+  --lift: 0 18px 40px -32px rgba(54, 37, 17, .5);
   --t: 220ms cubic-bezier(.2, .7, .2, 1);
 }
 
@@ -59,6 +68,8 @@
   --bone: #0E0D0B; --paper: #16150F; --card: #1B1A14; --ink: #EDE8DE;
   --soft: #CFC7B8; --muted: #9A9284; --faint: #6E6759; --stone: #35332A;
   --gold: #C9A96A; --champagne: #DCC49A; --bordeaux: #C0757F; --verdigris: #8FA99A;
+  /* the brown family lightens for the dark room, so buttons still read */
+  --chestnut: #B07C4F; --chestnut-deep: #C79365; --terracotta: #D98A5F;
   --bg: #0E0D0B; --fg: #EDE8DE; --fg-soft: #CFC7B8; --fg-mut: #9A9284;
   --surface: #1B1A14; --sunken: #16150F;
   --rule: rgba(237, 232, 222, .18); --rule-2: rgba(237, 232, 222, .4);
@@ -71,10 +82,12 @@
   --fg: #000; --fg-soft: #000; --fg-mut: #1A1A1A; --bg: #FFF; --surface: #FFF;
   --sunken: #F0F0F0; --rule: #000; --rule-2: #000; --accent: #6B3F00;
   --accent-2: #5C0F1C; --ok: #0A5C2A; --warn: #6B4A00; --bad: #7A0011; --info: #003B57;
+  --chestnut: #33200F; --chestnut-deep: #1F1206; --terracotta: #7A3410;
 }
 [data-contrast="high"][data-theme="dark"] {
   --fg: #FFF; --fg-soft: #FFF; --fg-mut: #E8E8E8; --bg: #000; --surface: #0A0A0A;
   --sunken: #141414; --rule: #FFF; --rule-2: #FFF; --accent: #FFD98A; --accent-2: #FFA7B0;
+  --chestnut: #E8B98A; --chestnut-deep: #F2CDA6; --terracotta: #FFB183;
 }
 
 /* reading-font swap for dyslexia-friendly text */
@@ -106,7 +119,7 @@
 html { font-size: calc(16px * var(--fs)); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
-  font-family: var(--ui); font-weight: 300; font-size: 1rem; line-height: 1.62;
+  font-family: var(--ui); font-weight: 400; font-size: 1rem; line-height: 1.62;
   -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
@@ -148,13 +161,16 @@ small { font-size: .82rem; }
 
 .kicker {
   font-family: var(--mono); font-size: var(--kicker); letter-spacing: .34em;
-  text-transform: uppercase; color: var(--accent); margin: 0 0 1rem;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 1rem;
   display: flex; align-items: baseline; gap: .8rem;
 }
 .kicker::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
 .kicker.plain::after { display: none; }
 
-.lede { font-size: 1.16rem; line-height: 1.62; color: var(--fg-soft); max-width: 56ch; }
+.lede {
+  font-size: 1.16rem; line-height: 1.62; color: var(--fg-soft);
+  max-width: 48ch; margin-right: clamp(2rem, 6vw, 5.5rem);
+}
 .mono { font-family: var(--mono); font-size: .82em; letter-spacing: .02em; }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; letter-spacing: .01em; }
 .tiny { font-family: var(--mono); font-size: .6875rem; letter-spacing: .18em; text-transform: uppercase; color: var(--fg-mut); }
@@ -207,7 +223,7 @@ small { font-size: .82rem; }
 .brand-sub { font-family: var(--mono); font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--fg-mut); }
 .nav { display: flex; align-items: center; gap: 1.5rem; }
 .nav a {
-  font-family: var(--mono); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  font-family: var(--mono); font-size: .79rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--fg-soft); padding-block: .3rem; border-bottom: 1px solid transparent; transition: color var(--t), border-color var(--t);
 }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--fg); border-bottom-color: var(--accent); }
@@ -224,17 +240,21 @@ small { font-size: .82rem; }
   transition: background var(--t), color var(--t), border-color var(--t), transform var(--t);
   text-align: center; line-height: 1.1;
 }
-.btn:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.btn:hover { background: var(--chestnut); color: var(--bone); border-color: var(--chestnut); }
 .btn:active { transform: translateY(1px); }
 .btn[disabled], .btn[aria-disabled="true"] { opacity: .4; pointer-events: none; }
-.btn.solid { --btn-bg: var(--fg); --btn-fg: var(--bg); }
-.btn.solid:hover { --btn-bg: var(--accent); --btn-fg: #fff; --btn-bd: var(--accent); }
+.btn.solid { --btn-bg: var(--chestnut); --btn-fg: var(--bg); --btn-bd: var(--chestnut); }
+/* Declared directly, not through the custom properties: .btn:hover above sets
+   `background` itself, and a variable it never re-reads cannot win the cascade.
+   Without this the primary button had no hover state at all. */
+.btn.solid:hover { background: var(--chestnut-deep); color: var(--bone); border-color: var(--chestnut-deep); }
 .btn.gold { --btn-bd: var(--accent); --btn-fg: var(--accent); }
 .btn.gold:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 .btn.danger { --btn-bd: var(--bad); --btn-fg: var(--bad); }
 .btn.danger:hover { background: var(--bad); color: #fff; border-color: var(--bad); }
 .btn.sm { padding: .48rem .9rem; font-size: .65rem; letter-spacing: .14em; }
-.btn.ghost { --btn-bd: var(--rule-2); }
+.btn.ghost { --btn-bd: var(--chestnut); --btn-fg: var(--chestnut); }
+.btn.ghost:hover { background: var(--chestnut); color: var(--bone); border-color: var(--chestnut); }
 .btn.block { width: 100%; }
 .btn-row { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; }
 
@@ -256,7 +276,7 @@ input[type="number"], input[type="date"], input[type="time"], input[type="passwo
 select, textarea {
   width: 100%; padding: .72rem .85rem; background: var(--surface); color: var(--fg);
   border: 1px solid var(--rule-2); border-radius: var(--radius); font-family: var(--ui);
-  font-size: .95rem; font-weight: 300; transition: border-color var(--t), background var(--t);
+  font-size: .95rem; font-weight: 400; transition: border-color var(--t), background var(--t);
 }
 textarea { min-height: 88px; resize: vertical; line-height: 1.55; }
 .input:focus, input:focus, select:focus, textarea:focus { border-color: var(--accent); outline: none; box-shadow: inset 0 0 0 1px var(--accent); }
@@ -347,7 +367,7 @@ legend { font-family: var(--mono); font-size: .66rem; letter-spacing: .2em; text
 
 /* ------------------------------------------------------------------ modal */
 .modal-backdrop {
-  position: fixed; inset: 0; background: rgba(21, 19, 16, .55); z-index: 150;
+  position: fixed; inset: 0; background: rgba(54, 37, 17, .5); z-index: 150;
   display: flex; align-items: center; justify-content: center; padding: 1rem;
   animation: fade .2s ease both;
 }
