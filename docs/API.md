@@ -70,7 +70,7 @@ Base URL is the origin of the site. Everything is JSON unless the path says othe
 
 | Method | Path | Min role | Notes |
 |---|---|---|---|
-| GET | `/api/availability` | public | `serviceId, variantId, staffId, date, days` → flat days with every free slot and who is free |
+| GET | `/api/availability` | public | `serviceId, variantId, staffId, date, days` → flat days with every free slot and who is free. A day with no slots carries a `reason`: the holiday name, `Closed` for a weekly day off, or `Fully booked` when the diary really is full |
 | GET | `/api/slots` | public | one day, optionally including unavailable reasons |
 | POST | `/api/appointments` | public | desk bookings become CONFIRMED, online ones REQUESTED; creates/links the client by phone |
 | GET | `/api/appointments` | STYLIST | `from,to,staffId,status` |
